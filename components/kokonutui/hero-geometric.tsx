@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Manrope } from "next/font/google"
-import Image from "next/image"
+import { BarChart3 } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const manrope = Manrope({
@@ -77,7 +77,7 @@ function ElegantShape({
 }
 
 export default function HeroGeometric({
-  badge = "Kokonut UI",
+  badge = "HotViking",
   headline = "Clarity. Confidence. Growth.",
   subheadline = "Productized BI for service-based teams — async, fast, decision-ready.",
   primaryCta = "Start with Snapshot",
@@ -158,16 +158,16 @@ export default function HeroGeometric({
         />
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 md:px-6">
-        <div className="max-w-3xl mx-auto text-center">
+      <div className="relative z-10 container mx-auto px-4 md:px-6 flex justify-center items-center">
+        <div className="w-full max-w-3xl mx-auto text-center">
           <motion.div
             custom={0}
             variants={fadeUpVariants}
             initial="hidden"
             animate="visible"
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1B263B]/[0.03] border border-[#1B263B]/[0.08] mb-4 md:mb-6"
+            className="inline-flex items-center justify-center gap-2 px-3 py-1.5 rounded-full bg-[#1B263B]/[0.03] border border-[#1B263B]/[0.08] mb-4 md:mb-6 mx-auto"
           >
-            <Image src="https://kokonutui.com/logo.svg" alt="Kokonut UI" width={20} height={20} />
+            <BarChart3 size={20} className="text-deepblue" />
             <span className="text-sm text-[#2B2D42]/80 tracking-wide">{badge}</span>
           </motion.div>
 
@@ -189,7 +189,7 @@ export default function HeroGeometric({
           </motion.div>
 
           <motion.div custom={2} variants={fadeUpVariants} initial="hidden" animate="visible">
-            <p className="text-sm sm:text-base md:text-lg text-[#2B2D42]/70 mb-5 leading-relaxed font-light tracking-wide max-w-2xl mx-auto px-4">
+            <p className="text-sm sm:text-base md:text-lg text-[#2B2D42]/70 mb-5 leading-relaxed font-medium tracking-wide max-w-2xl mx-auto px-4">
               {subheadline}
             </p>
           </motion.div>
@@ -199,7 +199,7 @@ export default function HeroGeometric({
             variants={fadeUpVariants}
             initial="hidden"
             animate="visible"
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex flex-col sm:flex-row gap-4 justify-center mx-auto"
           >
             <button className="px-5 py-2.5 rounded-full bg-gradient-to-r from-[#FF6B00] to-[#FF6B00] text-white font-medium hover:shadow-lg hover:shadow-[#FF6B00]/20 transition-all duration-300 transform hover:-translate-y-1">
               {primaryCta}
