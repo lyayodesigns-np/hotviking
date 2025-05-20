@@ -36,7 +36,7 @@ export default function DeliverablesComparison() {
   const [activeTab, setActiveTab] = useState<"features" | "details">("features")
 
   return (
-    <section className="py-20 bg-[#F0F0F5]">
+    <section className="py-20 bg-softgray">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
           <motion.h2
@@ -44,7 +44,7 @@ export default function DeliverablesComparison() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className={cn("text-3xl md:text-4xl font-bold text-[#2B2D42] mb-4", manrope.className)}
+            className={cn("text-3xl md:text-4xl font-bold text-charcoal mb-4", manrope.className)}
           >
             Deliverables Comparison
           </motion.h2>
@@ -53,21 +53,21 @@ export default function DeliverablesComparison() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-lg text-[#2B2D42]/70 max-w-2xl mx-auto"
+            className="text-lg text-charcoal/70 max-w-2xl mx-auto"
           >
             Compare what's included in each plan
           </motion.p>
         </div>
 
         <div className="mb-8 flex justify-center">
-          <div className="inline-flex p-1 rounded-lg bg-white border border-[#2B2D42]/10">
+          <div className="inline-flex p-1 rounded-lg bg-white border border-charcoal/10">
             <button
               onClick={() => setActiveTab("features")}
               className={cn(
                 "px-4 py-2 text-sm font-medium rounded-md transition-all",
                 activeTab === "features"
-                  ? "bg-[#5AC8C8] text-[#1B263B]"
-                  : "bg-transparent text-[#2B2D42]/70 hover:text-[#2B2D42]",
+                  ? "bg-teal text-deepblue"
+                  : "bg-transparent text-charcoal/70 hover:text-charcoal",
               )}
             >
               Features
@@ -77,8 +77,8 @@ export default function DeliverablesComparison() {
               className={cn(
                 "px-4 py-2 text-sm font-medium rounded-md transition-all",
                 activeTab === "details"
-                  ? "bg-[#5AC8C8] text-[#1B263B]"
-                  : "bg-transparent text-[#2B2D42]/70 hover:text-[#2B2D42]",
+                  ? "bg-teal text-deepblue"
+                  : "bg-transparent text-charcoal/70 hover:text-charcoal",
               )}
             >
               Plan Details
@@ -96,23 +96,23 @@ export default function DeliverablesComparison() {
             <table className="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm">
               <thead>
                 <tr className="bg-[#1A2B3C]/5">
-                  <th className="py-4 px-6 text-left text-[#2B2D42] font-semibold">Feature</th>
-                  <th className="py-4 px-6 text-center text-[#2B2D42] font-semibold">
+                  <th className="py-4 px-6 text-left text-charcoal font-semibold">Feature</th>
+                  <th className="py-4 px-6 text-center text-charcoal font-semibold">
                     <div className="flex flex-col items-center">
                       <span>Clarity</span>
-                      <span className="text-sm font-normal text-[#2B2D42]/70">$499 one-time</span>
+                      <span className="text-sm font-normal text-charcoal/70">$499 one-time</span>
                     </div>
                   </th>
                   <th className="py-4 px-6 text-center text-[#1A2B3C] font-semibold">
                     <div className="flex flex-col items-center">
                       <span>Momentum</span>
-                      <span className="text-sm font-normal text-[#2B2D42]/70">$299/mo</span>
+                      <span className="text-sm font-normal text-charcoal/70">$299/mo</span>
                     </div>
                   </th>
                   <th className="py-4 px-6 text-center text-[#1A2B3C] font-semibold">
                     <div className="flex flex-col items-center">
                       <span>Growth</span>
-                      <span className="text-sm font-normal text-[#2B2D42]/70">$699/mo</span>
+                      <span className="text-sm font-normal text-charcoal/70">$699/mo</span>
                     </div>
                   </th>
                 </tr>
@@ -121,9 +121,9 @@ export default function DeliverablesComparison() {
                 {features.map((feature, index) => (
                   <tr
                     key={index}
-                    className={cn("border-t border-[#2B2D42]/10", index % 2 === 0 ? "bg-white" : "bg-[#2B2D42]/[0.02]")}
+                    className={cn("border-t border-charcoal/10", index % 2 === 0 ? "bg-white" : "bg-charcoal/[0.02]")}
                   >
-                    <td className="py-3 px-6 text-[#2B2D42]/80">{feature.name}</td>
+                    <td className="py-3 px-6 text-charcoal/80">{feature.name}</td>
                     <td className="py-3 px-6 text-center">
                       {feature.clarity ? (
                         <Check size={20} className="mx-auto text-[#4FD1C5]" />
@@ -160,17 +160,17 @@ export default function DeliverablesComparison() {
             <table className="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm">
               <thead>
                 <tr className="bg-[#1A2B3C]/5">
-                  <th className="py-4 px-6 text-left text-[#2B2D42] font-semibold">Plan</th>
-                  <th className="py-4 px-6 text-left text-[#2B2D42] font-semibold">Price</th>
-                  <th className="py-4 px-6 text-left text-[#2B2D42] font-semibold">Includes</th>
-                  <th className="py-4 px-6 text-left text-[#2B2D42] font-semibold">Best For</th>
+                  <th className="py-4 px-6 text-left text-charcoal font-semibold">Plan</th>
+                  <th className="py-4 px-6 text-left text-charcoal font-semibold">Price</th>
+                  <th className="py-4 px-6 text-left text-charcoal font-semibold">Includes</th>
+                  <th className="py-4 px-6 text-left text-charcoal font-semibold">Best For</th>
                 </tr>
               </thead>
               <tbody>
                 <tr className="border-t border-[#1A2B3C]/10 bg-white">
-                  <td className="py-4 px-6 text-[#2B2D42] font-medium">Clarity</td>
-                  <td className="py-4 px-6 text-[#2B2D42]/80">$499 (one-time)</td>
-                  <td className="py-4 px-6 text-[#2B2D42]/80">
+                  <td className="py-4 px-6 text-charcoal font-medium">Clarity</td>
+                  <td className="py-4 px-6 text-charcoal/80">$499 (one-time)</td>
+                  <td className="py-4 px-6 text-charcoal/80">
                     <ul className="list-disc pl-5 space-y-1">
                       <li>Power BI dashboard</li>
                       <li>KPI Map + Insight Summary</li>
@@ -178,12 +178,12 @@ export default function DeliverablesComparison() {
                       <li>Includes 1 Power BI license for 1 month</li>
                     </ul>
                   </td>
-                  <td className="py-4 px-6 text-[#2B2D42]/80">First-time audit or clarity check</td>
+                  <td className="py-4 px-6 text-charcoal/80">First-time audit or clarity check</td>
                 </tr>
-                <tr className="border-t border-[#2B2D42]/10 bg-[#2B2D42]/[0.02]">
-                  <td className="py-4 px-6 text-[#2B2D42] font-medium">Momentum</td>
-                  <td className="py-4 px-6 text-[#2B2D42]/80">$299/mo</td>
-                  <td className="py-4 px-6 text-[#2B2D42]/80">
+                <tr className="border-t border-charcoal/10 bg-charcoal/[0.02]">
+                  <td className="py-4 px-6 text-charcoal font-medium">Momentum</td>
+                  <td className="py-4 px-6 text-charcoal/80">$299/mo</td>
+                  <td className="py-4 px-6 text-charcoal/80">
                     <ul className="list-disc pl-5 space-y-1">
                       <li>Everything in Clarity, plus:</li>
                       <li>Monthly Power BI dashboard refresh</li>
@@ -192,12 +192,12 @@ export default function DeliverablesComparison() {
                       <li>1 Power BI Pro license</li>
                     </ul>
                   </td>
-                  <td className="py-4 px-6 text-[#2B2D42]/80">Teams wanting consistent insight and updates</td>
+                  <td className="py-4 px-6 text-charcoal/80">Teams wanting consistent insight and updates</td>
                 </tr>
                 <tr className="border-t border-[#1A2B3C]/10 bg-white">
-                  <td className="py-4 px-6 text-[#2B2D42] font-medium">Growth</td>
-                  <td className="py-4 px-6 text-[#2B2D42]/80">$699/mo</td>
-                  <td className="py-4 px-6 text-[#2B2D42]/80">
+                  <td className="py-4 px-6 text-charcoal font-medium">Growth</td>
+                  <td className="py-4 px-6 text-charcoal/80">$699/mo</td>
+                  <td className="py-4 px-6 text-charcoal/80">
                     <ul className="list-disc pl-5 space-y-1">
                       <li>Everything in Momentum, plus:</li>
                       <li>Forecasts & KPI projections</li>

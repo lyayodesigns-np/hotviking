@@ -28,12 +28,12 @@ function FeatureItem({ icon, title, description, delay }: FeatureItemProps) {
       viewport={{ once: true }}
       className="flex items-start group p-4 rounded-lg hover:bg-white/70 transition-all duration-300"
     >
-      <div className="w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-[#5AC8C8]/10 to-[#FF6B00]/10 mr-4 group-hover:scale-110 transition-transform duration-300">
-        <div className="text-[#2B2D42]">{icon}</div>
+      <div className="w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-teal/10 to-orange/10 mr-4 group-hover:scale-110 transition-transform duration-300">
+        <div className="text-charcoal">{icon}</div>
       </div>
       <div>
-        <h3 className="text-[#2B2D42] font-medium mb-1 group-hover:text-[#1B263B] transition-colors duration-300">{title}</h3>
-        <p className="text-[#2B2D42]/70 text-sm leading-relaxed">{description}</p>
+        <h3 className="text-charcoal font-medium mb-1 group-hover:text-deepblue transition-colors duration-300">{title}</h3>
+        <p className="text-charcoal/70 text-sm leading-relaxed">{description}</p>
       </div>
     </motion.div>
   )
@@ -48,7 +48,7 @@ function AbstractShape({ className, delay = 0 }: { className?: string; delay?: n
       viewport={{ once: true }}
       className={cn("absolute pointer-events-none", className)}
     >
-      <div className="w-64 h-64 rounded-full bg-gradient-to-r from-[#5AC8C8]/5 to-transparent border border-[#5AC8C8]/10 blur-xl" />
+      <div className="w-64 h-64 rounded-full bg-gradient-to-r from-emerald/5 to-transparent border border-emerald/10 blur-xl" />
     </motion.div>
   )
 }
@@ -62,21 +62,21 @@ function ChartIllustration() {
       viewport={{ once: true }}
       className="relative h-full w-full min-h-[400px] flex items-center justify-center"
     >
-      <div className="w-full h-full max-w-[520px] max-h-[400px] bg-white/80 backdrop-blur-sm rounded-xl shadow-sm overflow-hidden border border-[#2B2D42]/5 p-8 flex flex-col">
+      <div className="w-full h-full max-w-[520px] max-h-[400px] bg-white/80 backdrop-blur-sm rounded-xl shadow-sm overflow-hidden border border-charcoal/5 p-8 flex flex-col">
         {/* Chart Title */}
         <div className="flex justify-between items-center mb-8">
           <div>
-            <h4 className="text-[#2B2D42] font-medium">Performance Overview</h4>
-            <p className="text-xs text-[#2B2D42]/60">Year-to-date metrics</p>
+            <h4 className="text-charcoal font-medium">Performance Overview</h4>
+            <p className="text-xs text-charcoal/60">Year-to-date metrics</p>
           </div>
           <div className="flex items-center space-x-4">
             <div className="flex items-center">
-              <div className="w-2.5 h-2.5 rounded-full bg-[#5AC8C8] mr-2" />
-              <span className="text-xs text-[#2B2D42]/70 font-medium">Revenue</span>
+              <div className="w-2.5 h-2.5 rounded-full bg-teal mr-2" />
+              <span className="text-xs text-charcoal/70 font-medium">Revenue</span>
             </div>
             <div className="flex items-center">
-              <div className="w-2.5 h-2.5 rounded-full bg-[#FF6B00] mr-2" />
-              <span className="text-xs text-[#2B2D42]/70 font-medium">Growth</span>
+              <div className="w-2.5 h-2.5 rounded-full bg-orange mr-2" />
+              <span className="text-xs text-charcoal/70 font-medium">Growth</span>
             </div>
           </div>
         </div>
@@ -85,10 +85,10 @@ function ChartIllustration() {
         <div className="flex-1 relative">
           {/* Grid lines */}
           <div className="absolute inset-0 flex flex-col justify-between">
-            <div className="border-b border-dashed border-[#2B2D42]/10"></div>
-            <div className="border-b border-dashed border-[#2B2D42]/10"></div>
-            <div className="border-b border-dashed border-[#2B2D42]/10"></div>
-            <div className="border-b border-dashed border-[#2B2D42]/10"></div>
+            <div className="border-b border-dashed border-charcoal/10"></div>
+            <div className="border-b border-dashed border-charcoal/10"></div>
+            <div className="border-b border-dashed border-charcoal/10"></div>
+            <div className="border-b border-dashed border-charcoal/10"></div>
           </div>
           
           {/* Chart lines */}
@@ -157,17 +157,17 @@ function ChartIllustration() {
             viewport={{ once: true }}
           >
             <div className="relative">
-              <div className="w-5 h-5 rounded-full bg-white border-2 border-[#5AC8C8] shadow-md"></div>
-              <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-[#1B263B] text-white text-xs py-1.5 px-3 rounded-lg shadow-sm whitespace-nowrap">
+              <div className="w-5 h-5 rounded-full bg-white border-2 border-teal shadow-md"></div>
+              <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-deepblue text-white text-xs py-1.5 px-3 rounded-lg shadow-sm whitespace-nowrap">
                 <div className="font-medium">+42%</div>
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 rotate-45 w-2 h-2 bg-[#1B263B]"></div>
+                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 rotate-45 w-2 h-2 bg-deepblue"></div>
               </div>
             </div>
           </motion.div>
         </div>
         
         {/* X-axis labels */}
-        <div className="flex justify-between pt-2 text-xs text-[#2B2D42]/60 font-medium">
+        <div className="flex justify-between pt-2 text-xs text-charcoal/60 font-medium">
           <div>Jan</div>
           <div>Mar</div>
           <div>Jun</div>
@@ -178,7 +178,7 @@ function ChartIllustration() {
       
       {/* Accent elements */}
       <motion.div
-        className="absolute -top-3 -right-3 w-24 h-24 rounded-full bg-gradient-to-br from-[#5AC8C8]/10 to-[#FF6B00]/5 blur-xl"
+        className="absolute -top-3 -right-3 w-24 h-24 rounded-full bg-gradient-to-br from-teal/10 to-orange/5 blur-xl"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 1 }}
@@ -186,7 +186,7 @@ function ChartIllustration() {
       />
       
       <motion.div
-        className="absolute -bottom-4 -left-4 w-32 h-32 rounded-full bg-gradient-to-tr from-[#FF6B00]/10 to-[#5AC8C8]/5 blur-xl"
+        className="absolute -bottom-4 -left-4 w-32 h-32 rounded-full bg-gradient-to-tr from-orange/10 to-teal/5 blur-xl"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.4, duration: 1 }}
@@ -210,7 +210,7 @@ export default function HowWeHelp() {
   }
 
   return (
-    <section className="relative py-20 bg-[#F0F0F5] overflow-hidden">
+    <section className="relative py-20 bg-softgray overflow-hidden">
       <div className="absolute inset-0 overflow-hidden">
         <AbstractShape className="top-10 left-10" delay={0.2} />
         <AbstractShape className="bottom-20 right-10" delay={0.4} />
@@ -223,7 +223,7 @@ export default function HowWeHelp() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className={cn("text-3xl md:text-4xl font-bold text-[#2B2D42] mb-4", manrope.className)}
+            className={cn("text-3xl md:text-4xl font-bold text-charcoal mb-4", manrope.className)}
           >
             How We Help
           </motion.h2>
@@ -232,7 +232,7 @@ export default function HowWeHelp() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-lg text-[#2B2D42]/70 max-w-2xl mx-auto"
+            className="text-lg text-charcoal/70 max-w-2xl mx-auto"
           >
             HotViking is a lean, async-first insights partner built for small and growing service-based businesses. We give time-strapped teams the power to understand their data and take action without the drag of traditional BI tools.
           </motion.p>
@@ -240,8 +240,8 @@ export default function HowWeHelp() {
 
         <div className="flex flex-col lg:flex-row gap-10">
           <div className="lg:w-2/5">
-            <div className="bg-white/50 backdrop-blur-sm rounded-xl p-4 border border-[#2B2D42]/10">
-              <h3 className="text-[#1B263B] font-semibold mb-4 pl-4 border-l-4 border-[#FF6B00]">Our Solutions</h3>
+            <div className="bg-white/50 backdrop-blur-sm rounded-xl p-4 border border-charcoal/10">
+              <h3 className="text-deepblue font-semibold mb-4 pl-4 border-l-4 border-orange">Our Solutions</h3>
               <div className="space-y-1">
                 <FeatureItem
                   icon={<BarChart3 size={20} />}
@@ -277,9 +277,9 @@ export default function HowWeHelp() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
               viewport={{ once: true }}
-              className="mt-4 bg-white/70 backdrop-blur-sm p-4 rounded-lg border border-[#2B2D42]/5"
+              className="mt-4 bg-white/70 backdrop-blur-sm p-4 rounded-lg border border-charcoal/5"
             >
-              <p className="text-sm text-[#2B2D42]/80 italic">
+              <p className="text-sm text-charcoal/80 italic">
                 Led by a BI expert with 10+ years of experience across government and corporate sectors, HotViking applies enterprise-grade rigor to support fast-moving, time-strapped teams.
               </p>
             </motion.div>

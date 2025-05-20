@@ -15,7 +15,7 @@ const config: Config = {
         manrope: ["var(--font-manrope)"],
       },
       colors: {
-        background: "#F7F7F7",
+        background: "#FAFAFA",
         foreground: "hsl(var(--foreground))",
         card: {
           DEFAULT: "hsl(var(--card))",
@@ -65,10 +65,13 @@ const config: Config = {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        charcoal: "#1A2B3C",
-        deepblue: "#2D3748",
-        orange: "#FF7A00",
-        teal: "#4FD1C5",
+        // New color palette
+        charcoal: "#2B2D42",
+        deepblue: "#1B263B",
+        orange: "#FF6B00",
+        teal: "#5AC8C8",
+        softgray: "#F0F0F5",
+        offwhite: "#FAFAFA",
       },
       borderRadius: {
         lg: "var(--radius)",
