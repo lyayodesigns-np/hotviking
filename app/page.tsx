@@ -4,6 +4,7 @@ import HeroGeometric from "../components/kokonutui/hero-geometric"
 import HowWeHelp from "../components/sections/how-we-help"
 import SnapshotPromo from "../components/sections/snapshot-promo"
 import ServicePackages from "../components/sections/service-packages"
+import Plans from "../components/sections/plans"
 import DeliverablesComparison from "../components/sections/deliverables-comparison"
 import IndustryInsights from "../components/sections/industry-insights"
 import InsightMethod from "../components/sections/insight-method"
@@ -17,16 +18,11 @@ export default function Page() {
   return (
     <main>
       <HeroGeometric />
-      <HowWeHelp />
-      <ServicePackages />
-      <DeliverablesComparison />
-      <SnapshotPromo />
-      <IndustryInsights />
+      <SnapshotPromo />   
       <InsightMethod />
-      <WhyPowerBI />
-      <ClientOnboarding />
-      <AboutFounder />
-      <Testimonials />
+      <ServicePackages />
+      
+         
       <BottomCTA />
     </main>
   )

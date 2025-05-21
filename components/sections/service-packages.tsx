@@ -83,30 +83,40 @@ export default function ServicePackages() {
             viewport={{ once: true }}
             className={cn("text-3xl md:text-4xl font-bold text-charcoal mb-4", manrope.className)}
           >
-            Service Packages
+            Not sure where to start?
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-lg text-charcoal/70 max-w-2xl mx-auto"
+            className="text-lg text-charcoal/70 max-w-2xl mx-auto mb-12"
           >
-            Choose the plan that fits your business needs
+            Every client begins with a <span className="font-semibold text-charcoal">free 45-minute async consultation</span> to assess your goals and data setup. No pressure — just clarity on what's possible.
           </motion.p>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="inline-block px-4 py-2 bg-gradient-to-r from-teal/20 to-orange/20 rounded-full text-charcoal font-medium mb-6 border border-charcoal/10"
+          >
+            Core Offerings
+          </motion.div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           <PricingCard
             title="Clarity"
-            price="$499"
+            price="$300"
             period="one-time"
             description="First-time audit or clarity check"
             features={[
               "Power BI dashboard",
               "KPI Map + Insight Summary",
-              "Walkthrough (live Google Meet)",
-              "Includes 1 Power BI license for 1 month",
+              "Walkthrough (Google Meet)",
+              "1 Power BI license for 1 month",
             ]}
             cta="Choose Plan"
             isPopular={true}
@@ -114,14 +124,14 @@ export default function ServicePackages() {
           />
           <PricingCard
             title="Momentum"
-            price="$299"
-            period="/mo"
-            description="Teams wanting consistent insight and updates"
+            price="$200"
+            period="/month"
+            description="Teams wanting consistent updates"
             features={[
-              "Everything in Clarity, plus:",
-              "Monthly Power BI dashboard refresh",
+              "Everything in Clarity",
+              "Monthly dashboard refresh",
               "Trend summary",
-              "Email-based support",
+              "Email support",
               "1 Power BI Pro license",
             ]}
             cta="See What's Included"
@@ -129,11 +139,11 @@ export default function ServicePackages() {
           />
           <PricingCard
             title="Growth"
-            price="$699"
-            period="/mo"
+            price="$500"
+            period="/month"
             description="Growth-stage businesses needing deeper strategy"
             features={[
-              "Everything in Momentum, plus:",
+              "Everything in Momentum",
               "Forecasts & KPI projections",
               "Funnel diagnostics",
               "Industry benchmarks",
@@ -144,6 +154,27 @@ export default function ServicePackages() {
             delay={0.4}
           />
         </div>
+        
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          viewport={{ once: true }}
+          className="mt-16 max-w-4xl mx-auto bg-white rounded-xl p-6 border border-charcoal/10 shadow-sm"
+        >
+          <div className="flex flex-col md:flex-row items-center gap-6">
+            <div className="flex-shrink-0 bg-gradient-to-br from-teal/20 to-orange/20 p-4 rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-charcoal">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <div>
+              <p className="text-charcoal/80 text-center md:text-left leading-relaxed">
+                All plans are <span className="font-semibold text-charcoal">async-first</span>, <span className="font-semibold text-charcoal">version-controlled</span>, and include a walkthrough on Google Meet. Dashboards are built in <span className="font-semibold text-charcoal">Power BI</span> (default), optionally in Google Sheets or Looker Studio, and shared via secure Google Drive folders.
+              </p>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   )

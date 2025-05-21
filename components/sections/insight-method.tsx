@@ -67,23 +67,23 @@ export default function InsightMethod() {
   const steps = [
     {
       icon: <ClipboardCheck size={32} />,
-      title: "Data Intake",
-      description: "We collect your data through our secure intake process and prepare it for analysis."
-    },
-    {
-      icon: <BarChart3 size={32} />,
-      title: "Dashboard Creation",
-      description: "We build custom Power BI dashboards that visualize your key metrics and KPIs."
+      title: "Explore Services",
+      description: "View dashboards and pricing options"
     },
     {
       icon: <FileText size={32} />,
-      title: "Insight Summary",
-      description: "We provide a comprehensive summary highlighting key findings and trends."
+      title: "Complete Tally Form",
+      description: "Share your goals and data context"
+    },
+    {
+      icon: <BarChart3 size={32} />,
+      title: "Confirm Payment",
+      description: "Simple, secure checkout via Stripe"
     },
     {
       icon: <Lightbulb size={32} />,
-      title: "Strategic Recommendations",
-      description: "We deliver actionable recommendations to help you make data-driven decisions."
+      title: "Receive Dashboard",
+      description: "Delivered in ≤5 business days"
     }
   ]
 
@@ -107,7 +107,7 @@ export default function InsightMethod() {
             viewport={{ once: true }}
             className={cn("text-3xl md:text-4xl font-bold text-charcoal mb-4", manrope.className)}
           >
-            The HotViking Method™
+            How We Work
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -116,7 +116,7 @@ export default function InsightMethod() {
             viewport={{ once: true }}
             className="text-lg text-charcoal/70 max-w-2xl mx-auto"
           >
-            Our proven four-step process transforms your raw data into actionable insights
+            Our 4-step async process is designed for speed and simplicity — so you get meaningful insights without the fuss
           </motion.p>
         </div>
         
@@ -138,12 +138,65 @@ export default function InsightMethod() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
           viewport={{ once: true }}
-          className="mt-16 text-center"
+          className="mt-16 max-w-4xl mx-auto"
         >
-          <p className="text-charcoal/70 italic max-w-3xl mx-auto">
-            "The HotViking Method™ combines enterprise-grade data analysis with a streamlined delivery process, 
-            making advanced business intelligence accessible to growing service-based businesses."
-          </p>
+          <div className="bg-gradient-to-b from-white to-teal/5 rounded-xl overflow-hidden border border-teal/20 shadow-md">
+            <div className="px-6 py-4 bg-teal/10 border-b border-teal/20">
+              <h3 className={cn("text-xl font-semibold text-charcoal flex items-center", manrope.className)}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-teal mr-2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                After signing up:
+              </h3>
+            </div>
+            <div className="p-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-8">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-teal to-teal/70 text-white font-bold shadow-md mr-4">
+                    1
+                  </div>
+                  <div>
+                    <p className="text-charcoal/90 font-medium leading-relaxed">
+                      We'll send a friendly intro email and a simple data intake checklist
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-teal to-teal/70 text-white font-bold shadow-md mr-4">
+                    2
+                  </div>
+                  <div>
+                    <p className="text-charcoal/90 font-medium leading-relaxed">
+                      You'll receive a walkthrough of results via shared notes or screen share as needed
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-teal to-teal/70 text-white font-bold shadow-md mr-4">
+                    3
+                  </div>
+                  <div>
+                    <p className="text-charcoal/90 font-medium leading-relaxed">
+                      One round of revisions included for Snapshot clients
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-teal to-teal/70 text-white font-bold shadow-md mr-4">
+                    4
+                  </div>
+                  <div>
+                    <p className="text-charcoal/90 font-medium leading-relaxed">
+                      Ongoing plans come with email support and monthly updates
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>

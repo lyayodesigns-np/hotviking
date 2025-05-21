@@ -79,13 +79,15 @@ function ElegantShape({
 export default function HeroGeometric({
   badge = "HotViking",
   headline = "Clarity. Confidence. Growth.",
-  subheadline = "Productized BI for service-based teams — async, fast, decision-ready.",
-  primaryCta = "Start with Snapshot",
-  secondaryCta = "Try Free Dashboard",
+  subheading = "Business intelligence, minus the drag.",
+  text = "Cut through spreadsheet chaos, bloated reports, and endless back-and-forth.",
+  primaryCta = "Free 45-minute Consultation",
+  secondaryCta = "Have a Question? Ask Us!",
 }: {
   badge?: string
   headline?: string
-  subheadline?: string
+  subheading?: string
+  text?: string
   primaryCta?: string
   secondaryCta?: string
 }) {
@@ -174,7 +176,7 @@ export default function HeroGeometric({
           <motion.div custom={1} variants={fadeUpVariants} initial="hidden" animate="visible">
             <h1
               className={cn(
-                "text-2xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-5 tracking-tight whitespace-nowrap",
+                "text-3xl sm:text-5xl md:text-6xl font-extrabold mb-4 md:mb-5 tracking-tight whitespace-nowrap",
                 manrope.className,
               )}
             >
@@ -189,8 +191,11 @@ export default function HeroGeometric({
           </motion.div>
 
           <motion.div custom={2} variants={fadeUpVariants} initial="hidden" animate="visible">
-            <p className="text-sm sm:text-base md:text-lg text-[#2B2D42]/70 mb-5 leading-relaxed font-medium tracking-wide max-w-2xl mx-auto px-4">
-              {subheadline}
+            <p className="text-base sm:text-xl md:text-2xl text-[#2B2D42]/80 mb-3 leading-relaxed font-semibold tracking-wide max-w-2xl mx-auto px-4">
+              {subheading}
+            </p>
+            <p className="text-sm sm:text-base md:text-lg text-[#2B2D42]/60 mb-6 leading-relaxed font-normal tracking-wide max-w-2xl mx-auto px-4">
+              {text}
             </p>
           </motion.div>
 
@@ -199,7 +204,7 @@ export default function HeroGeometric({
             variants={fadeUpVariants}
             initial="hidden"
             animate="visible"
-            className="flex flex-col sm:flex-row gap-4 justify-center mx-auto"
+            className="flex flex-col sm:flex-row gap-4 justify-center mx-auto mb-8"
           >
             <button className="px-5 py-2.5 rounded-full bg-gradient-to-r from-[#FF6B00] to-[#FF6B00] text-white font-medium hover:shadow-lg hover:shadow-[#FF6B00]/20 transition-all duration-300 transform hover:-translate-y-1">
               {primaryCta}
@@ -207,6 +212,55 @@ export default function HeroGeometric({
             <button className="px-5 py-2.5 rounded-full bg-[#5AC8C8] text-[#1B263B] font-medium hover:bg-[#5AC8C8]/90 transition-all duration-300 transform hover:-translate-y-1">
               {secondaryCta}
             </button>
+          </motion.div>
+          
+          {/* Dashboard Preview */}
+          <motion.div
+            custom={4}
+            variants={fadeUpVariants}
+            initial="hidden"
+            animate="visible"
+            className="relative mx-auto max-w-4xl w-full"
+          >
+            <div className="bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200">
+              <div className="h-8 bg-gray-100 border-b border-gray-200 flex items-center px-4">
+                <div className="flex space-x-2">
+                  <div className="w-3 h-3 rounded-full bg-red-400"></div>
+                  <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
+                  <div className="w-3 h-3 rounded-full bg-green-400"></div>
+                </div>
+              </div>
+              <div className="grid grid-cols-4 gap-4 p-4">
+                <div className="col-span-1">
+                  <div className="space-y-3">
+                    <div className="h-8 bg-gray-100 rounded-md w-full"></div>
+                    <div className="h-8 bg-gray-100 rounded-md w-full"></div>
+                    <div className="h-8 bg-gray-100 rounded-md w-full"></div>
+                    <div className="h-8 bg-gray-100 rounded-md w-full"></div>
+                    <div className="h-8 bg-gray-100 rounded-md w-full"></div>
+                  </div>
+                </div>
+                <div className="col-span-3 grid grid-cols-2 gap-4">
+                  <div className="bg-gray-50 rounded-lg p-3 border border-gray-200">
+                    <div className="h-4 bg-gray-200 rounded-md w-1/3 mb-2"></div>
+                    <div className="h-24 bg-gradient-to-r from-[#5AC8C8]/30 to-[#5AC8C8]/10 rounded-md"></div>
+                  </div>
+                  <div className="bg-gray-50 rounded-lg p-3 border border-gray-200">
+                    <div className="h-4 bg-gray-200 rounded-md w-1/3 mb-2"></div>
+                    <div className="h-24 bg-gradient-to-r from-[#FF6B00]/30 to-[#FF6B00]/10 rounded-md"></div>
+                  </div>
+                  <div className="bg-gray-50 rounded-lg p-3 border border-gray-200">
+                    <div className="h-4 bg-gray-200 rounded-md w-1/3 mb-2"></div>
+                    <div className="h-24 bg-gradient-to-r from-[#4FD1C5]/30 to-[#4FD1C5]/10 rounded-md"></div>
+                  </div>
+                  <div className="bg-gray-50 rounded-lg p-3 border border-gray-200">
+                    <div className="h-4 bg-gray-200 rounded-md w-1/3 mb-2"></div>
+                    <div className="h-24 bg-gradient-to-r from-[#FF7A00]/30 to-[#FF7A00]/10 rounded-md"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#FAFAFA] via-transparent to-transparent opacity-50 pointer-events-none"></div>
           </motion.div>
         </div>
       </div>

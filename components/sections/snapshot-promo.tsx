@@ -13,7 +13,7 @@ const manrope = Manrope({
 
 export default function SnapshotPromo() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-softgray">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Text */}
@@ -30,37 +30,11 @@ export default function SnapshotPromo() {
               Proof Before Purchase
             </h2>
             <p className="text-lg text-charcoal/70 mb-8">
-              Get a taste of our data insights with a custom snapshot of your business. 
-              See exactly how we can transform your data into actionable insights before committing to a full package.
-            </p>
-            
-            <div className="space-y-4 mb-8">
-              <div className="flex items-start">
-                <div className="flex-shrink-0 w-5 h-5 bg-teal rounded-full flex items-center justify-center mt-1 mr-3">
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10 3L4.5 8.5L2 6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-                <p className="text-charcoal/80">Dashboard preview with your actual data</p>
-              </div>
-              <div className="flex items-start">
-                <div className="flex-shrink-0 w-5 h-5 bg-teal rounded-full flex items-center justify-center mt-1 mr-3">
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10 3L4.5 8.5L2 6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-                <p className="text-charcoal/80">Comprehensive insight summary</p>
-              </div>
-              <div className="flex items-start">
-                <div className="flex-shrink-0 w-5 h-5 bg-teal rounded-full flex items-center justify-center mt-1 mr-3">
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10 3L4.5 8.5L2 6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-                <p className="text-charcoal/80">Optional Loom video walkthrough</p>
-              </div>
-            </div>
-            
+              HotViking combines foundational business intelligence with scalable strategic tools — including predictive modeling, automated insight generation, and machine learning–driven forecasts for clients ready to take the next step.
+            </p>    
+            <p className="text-lg text-charcoal/70 mb-8">
+              We offer a productized set of BI services designed for simplicity, speed, and scale. Most clients start with a Snapshot, then upgrade to monthly plans as value becomes clear.
+            </p>            
             <button className="flex items-center gap-2 px-6 py-3 bg-orange text-white rounded-lg hover:bg-orange/90 transition-colors">
               Request My Snapshot <ArrowRight size={16} />
             </button>
