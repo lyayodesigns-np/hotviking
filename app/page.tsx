@@ -19,10 +19,8 @@ export default function Page() {
     <main>
       <HeroGeometric />
       <SnapshotPromo />   
-      <InsightMethod />
       <ServicePackages />
-      
-         
+      <InsightMethod /> 
       <BottomCTA />
     </main>
   )

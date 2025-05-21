@@ -88,7 +88,7 @@ export default function InsightMethod() {
   ]
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-softgray">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <motion.div

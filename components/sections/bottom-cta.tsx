@@ -12,7 +12,7 @@ const manrope = Manrope({
 
 export default function BottomCTA() {
   return (
-    <section className="py-24 bg-deepblue text-white">
+    <section className="py-24 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2
@@ -20,9 +20,9 @@ export default function BottomCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className={cn("text-3xl md:text-4xl lg:text-5xl font-bold mb-8", manrope.className)}
+            className={cn("text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-charcoal", manrope.className)}
           >
-            When you're ready to stop guessing and start growing — we're ready.
+            Stop guessing. Start growing.
           </motion.h2>
           
           <motion.div
@@ -35,7 +35,7 @@ export default function BottomCTA() {
               href="#contact" 
               className="inline-flex items-center gap-2 px-8 py-4 bg-orange text-white rounded-lg text-lg font-medium hover:bg-orange/90 transition-colors transform hover:-translate-y-1 hover:shadow-lg duration-300"
             >
-              Get Started
+              Schedule Your Free Consultation
               <ArrowRight size={20} />
             </a>
           </motion.div>
@@ -45,10 +45,25 @@ export default function BottomCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             viewport={{ once: true }}
-            className="mt-8 text-white/70"
+            className="mt-8 text-charcoal/70"
           >
-            Turn your data into decisions with HotViking's business intelligence solutions.
+            Book your free 45-minute consultation and take the first step toward decision-ready insight.
           </motion.p>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="mt-6"
+          >
+            <a 
+              href="#faq" 
+              className="text-charcoal/80 hover:text-orange underline text-lg transition-colors"
+            >
+              Have a Question? Ask Us!
+            </a>
+          </motion.div>
         </div>
       </div>
     </section>

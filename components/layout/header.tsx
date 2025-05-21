@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Manrope } from "next/font/google"
-import { Menu, X, BarChart3 } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const manrope = Manrope({
@@ -34,63 +35,65 @@ export default function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled 
-          ? "bg-charcoal shadow-md py-3" 
-          : "bg-transparent py-5"
+          ? "bg-charcoal shadow-md py-5" 
+          : "bg-transparent py-7"
       )}
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <div className="mr-2 text-deepblue">
-              <BarChart3 size={24} />
+            <div className="relative h-12 w-auto">
+              {isScrolled ? (
+                <Image 
+                  src="/logo.png" 
+                  alt="HotViking Logo" 
+                  width={120} 
+                  height={48} 
+                  className="object-contain"
+                  priority
+                />
+              ) : (
+                <Image 
+                  src="/logo-transparent.png" 
+                  alt="HotViking Logo" 
+                  width={120} 
+                  height={48} 
+                  className="object-contain"
+                  priority
+                />
+              )}
             </div>
-            <span className={cn(
-              "text-xl font-bold transition-colors",
-              isScrolled ? "text-white" : "text-charcoal",
-              manrope.className
-            )}>
-              HotViking
-            </span>
           </Link>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link 
-              href="/snapshot" 
+              href="/" 
               className={cn(
                 "transition-colors hover:text-teal",
                 isScrolled ? "text-white/80" : "text-charcoal/90"
               )}
             >
-              Snapshot Pack
+              Home
             </Link>
             <Link 
-              href="/services" 
+              href="/plans" 
               className={cn(
                 "transition-colors hover:text-teal",
                 isScrolled ? "text-white/80" : "text-charcoal/90"
               )}
             >
-              Services
+              Plans
             </Link>
             <Link 
-              href="/faqs" 
+              href="/why-hotviking" 
               className={cn(
                 "transition-colors hover:text-teal",
                 isScrolled ? "text-white/80" : "text-charcoal/90"
               )}
             >
-              FAQs
-            </Link>
-            <Link 
-              href="/onboarding" 
-              className={cn(
-                "transition-colors hover:text-teal",
-                isScrolled ? "text-white/80" : "text-charcoal/90"
-              )}
-            >
-              Onboarding
+              Why HotViking
             </Link>
             <Link 
               href="/contact"
@@ -120,32 +123,25 @@ export default function Header() {
         <div className="md:hidden bg-deepblue shadow-lg">
           <nav className="container mx-auto px-4 py-6 flex flex-col space-y-4">
             <Link 
-              href="/snapshot" 
+              href="/" 
               className="text-white/80 hover:text-teal transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
-              Snapshot Pack
+              Home
             </Link>
             <Link 
-              href="/services" 
+              href="/plans" 
               className="text-white/80 hover:text-teal transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
-              Services
+              Plans
             </Link>
             <Link 
-              href="/faqs" 
+              href="/why-hotviking" 
               className="text-white/80 hover:text-teal transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
-              FAQs
-            </Link>
-            <Link 
-              href="/onboarding" 
-              className="text-white/80 hover:text-teal transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Onboarding
+              Why HotViking
             </Link>
             <Link 
               href="/contact"

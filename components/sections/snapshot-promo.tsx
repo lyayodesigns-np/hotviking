@@ -23,11 +23,8 @@ export default function SnapshotPromo() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <div className="inline-block px-3 py-1 bg-orange/10 text-orange rounded-full text-sm font-medium mb-4">
-              Snapshot Pack
-            </div>
             <h2 className={cn("text-3xl md:text-4xl font-bold text-charcoal mb-6", manrope.className)}>
-              Proof Before Purchase
+              Plans
             </h2>
             <p className="text-lg text-charcoal/70 mb-8">
               HotViking combines foundational business intelligence with scalable strategic tools — including predictive modeling, automated insight generation, and machine learning–driven forecasts for clients ready to take the next step.
