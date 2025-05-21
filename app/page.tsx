@@ -13,6 +13,7 @@ import ClientOnboarding from "../components/sections/client-onboarding"
 import AboutFounder from "../components/sections/about-founder"
 import Testimonials from "../components/sections/testimonials"
 import BottomCTA from "../components/sections/bottom-cta"
+import WhyHotViking from "../components/sections/why-hotviking"
 
 export default function Page() {
   return (
@@ -20,6 +21,7 @@ export default function Page() {
       <HeroGeometric />
       <SnapshotPromo />   
       <ServicePackages />
+      <WhyHotViking />
       <InsightMethod /> 
       <BottomCTA />
     </main>
